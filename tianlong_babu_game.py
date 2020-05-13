@@ -22,8 +22,8 @@ xuzhu_power = person["xuzhu"]["power"]
 # 定义游戏主函数：恶搞天龙八部游戏！
 def egao_game():
     # 童姥及虚竹类实例化
-    tonglao = TongLao(1000, tonglao_power)
-    xuzhu = XuZhu(1000, xuzhu_power)
+    tonglao = TongLao(person["tonglao"]["hp"], tonglao_power)
+    xuzhu = XuZhu(person["xuzhu"]["hp"], xuzhu_power)
     print("欢迎来到”恶搞天龙八部“游戏！")
     # 获取用户使用游戏角色名字与敌人名字信息
     your_name = input("请从（无崖子/李秋水/丁春秋）中选择你想扮演的角色名字：")
@@ -37,21 +37,21 @@ def egao_game():
             print("你与天山童姥不期而遇！")
             tonglao.see_people(your_name)
             print("你（无崖子）：好，是时候展现真正的技术了！")
-            tonglao.fight(1000, wyz_power)
+            tonglao.fight(person["wuyazi"]["hp"], wyz_power)
         elif your_name == "李秋水":
             # 打印游戏角色血量、武力值信息
             print("your hp：{}，your power：{}".format(1000, lqs_power))
             print("你被天山童姥逮到了！")
             tonglao.see_people(your_name)
             print("你（李秋水）：哼！老娘从来就没怕过谁，我先杀了你！")
-            tonglao.fight(1000, lqs_power)
+            tonglao.fight(person["liqiushui"]["hp"], lqs_power)
         elif your_name == "丁春秋":
             # 打印游戏角色血量、武力值信息
             print("your hp：{}，your power：{}".format(1000, dcq_power))
             print("你被天山童姥追杀中。。。")
             tonglao.see_people(your_name)
             print("你（丁春秋）：哈哈哈哈，那你也别怪我心狠手辣了！")
-            tonglao.fight(1000, dcq_power)
+            tonglao.fight(person["dingchunqiu"]["hp"], dcq_power)
         else:
             print("请从（无崖子/李秋水/丁春秋）中选择一个角色！")
             egao_game()
