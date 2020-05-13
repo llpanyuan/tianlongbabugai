@@ -1,0 +1,24 @@
+tonglao:
+  hp: 1000
+  power: 350
+  skill: 1
+
+wuyazi:
+  hp: 1000
+  power: 300
+  skill: 1
+
+liqiushui:
+  hp: 1000
+  power: 400
+  skill: 1
+
+dingchunqiu:
+  hp: 1000
+  power: 525
+  skill: 1
+
+xuzhu:
+  hp: 1000
+  power: 0
+  skill: 1
